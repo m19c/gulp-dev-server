@@ -11,7 +11,7 @@ gulp.task('test', function () {
   gulp
     .src(['test/**/*.test.js'], { read: false })
     .pipe(coverage.instrument({
-      pattern: ['test/**/*'],
+      pattern: ['lib/**/*.js'],
       debugDirectory: 'dist/debug'
     }))
     .pipe(mocha())

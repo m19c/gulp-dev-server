@@ -9,7 +9,7 @@ app = express();
 app.use(liveReload());
 
 app.get('/', function (req, res) {
-  res.send('Harmony Test 2!');
+  res.send('Welcome!');
 });
 
 app.listen(1337);
