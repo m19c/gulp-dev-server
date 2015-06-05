@@ -30,10 +30,6 @@ gulp.task('test', function () {
   ;
 });
 
-gulp.task('test:send', function () {
-  // ...
-});
-
 gulp.task('lint', function () {
   gulp
     .src([
@@ -57,5 +53,5 @@ gulp.task('doc', function () {
 });
 
 gulp.task('default', function (done) {
-  rs('lint', 'test', 'test:send', done);
+  rs('lint', 'test', done);
 });
