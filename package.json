@@ -1,6 +1,8 @@
 {
   "name": "gulp-dev-server",
   "description": "",
+  "author": "Marc Binder <marcandrebinder@gmail.com>",
+  "main": "index.js",
   "dependencies": {
     "bluebird": "~2.9.27",
     "lodash.merge": "~3.3.1",
@@ -23,5 +25,8 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/gulp test"
-  }
+  },
+  "keywords": ["gulpplugin", "gulp", "server", "live", "reload", "dev", "http"],
+  "analyze": true,
+  "license": "MIT"
 }
