@@ -2,6 +2,7 @@
   "name": "gulp-server-example",
   "dependencies": {
     "express": "~4.12.4",
+    "connect-livereload": "~0.5.3",
     "gulp": "~3.9.0"
   }
 }

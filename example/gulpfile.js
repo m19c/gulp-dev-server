@@ -1,7 +1,7 @@
 var gulp   = require('gulp'),
     Server = require('../');
 
-gulp.task('serve', function () {
+gulp.task('dev', function () {
   Server.task({
     notify: ['./server.js'],
     restart: ['./server.js'],
