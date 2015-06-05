@@ -19,5 +19,8 @@
     "jsdoc": "3.3.0",
     "through2": "~0.6.5",
     "gulp-coverage": "~0.3.36"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test"
   }
 }
