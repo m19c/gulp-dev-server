@@ -19,12 +19,14 @@
     "gulp-mocha": "~2.1.0",
     "gulp-eslint": "~0.12.0",
     "chai": "~2.3.0",
+    "chai-as-promised": "~5.0.0",
     "jsdoc": "3.3.0",
     "through2": "~0.6.5",
-    "gulp-coverage": "~0.3.36"
+    "gulp-coverage": "~0.3.36",
+    "run-sequence": "~1.1.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/gulp test"
+    "test": "./node_modules/.bin/gulp"
   },
   "keywords": ["gulpplugin", "gulp", "server", "live", "reload", "dev", "http"],
   "analyze": true,

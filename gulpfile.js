@@ -4,6 +4,7 @@ var gulp     = require('gulp'),
     eslint   = require('gulp-eslint'),
     mocha    = require('gulp-mocha'),
     coverage = require('gulp-coverage'),
+    rs       = require('run-sequence'),
     doc      = require('./lib/gulp/doc');
 
 gulp.task('test', function () {
@@ -21,17 +22,25 @@ gulp.task('test', function () {
         outFile: 'coverage.html'
       },
       {
-        reporter: 'json',
-        outFile: 'coverage.json'
+        reporter: 'lcov',
+        outFile: 'coverage.lcov'
       }
     ]))
-    .pipe(gulp.dest('dist/report'));
+    .pipe(gulp.dest('dist/report'))
   ;
+});
+
+gulp.task('test:send', function () {
+  // ...
 });
 
 gulp.task('lint', function () {
   gulp
-    .src(['lib/**/*.js'])
+    .src([
+      'lib/**/*.js',
+      'test/**/*.js',
+      'gulpfile.js'
+    ])
     .pipe(eslint({
       configFile: '.eslintrc'
     }))
@@ -47,4 +56,6 @@ gulp.task('doc', function () {
   ;
 });
 
-gulp.task('default', ['lint', 'test']);
+gulp.task('default', function (done) {
+  rs('lint', 'test', 'test:send', done);
+});
