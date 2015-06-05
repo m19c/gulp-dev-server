@@ -1,6 +1,7 @@
 {
   "name": "gulp-dev-server",
-  "description": "",
+  "version": "1.0.0",
+  "description": "With `gulp-dev-server` you can simplify your development environment easy and uncomplicated. The annoying stopping and starting your script has an end.",
   "author": "Marc Binder <marcandrebinder@gmail.com>",
   "main": "index.js",
   "dependencies": {
