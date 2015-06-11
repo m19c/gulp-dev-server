@@ -21,6 +21,7 @@ gulp.task('dev', function () {
     restart: ['lib/**/*.js'],
     notify: ['static/**/*.js'],
     server: {
+      environment: 'development',
       script: { path: 'server.js' }
     }
   })
