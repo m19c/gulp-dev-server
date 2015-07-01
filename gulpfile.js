@@ -11,7 +11,7 @@ gulp.task('test', function () {
   gulp
     .src(['test/**/*.test.js'], { read: false })
     .pipe(coverage.instrument({
-      pattern: ['lib/**/*.js'],
+      pattern:        ['lib/**/*.js'],
       debugDirectory: 'dist/debug'
     }))
     .pipe(mocha())
@@ -19,11 +19,11 @@ gulp.task('test', function () {
     .pipe(coverage.format([
       {
         reporter: 'html',
-        outFile: 'coverage.html'
+        outFile:  'coverage.html'
       },
       {
         reporter: 'lcov',
-        outFile: 'coverage.lcov'
+        outFile:  'coverage.lcov'
       }
     ]))
     .pipe(gulp.dest('dist/report'))
