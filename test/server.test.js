@@ -1,56 +1,54 @@
-var chai           = require('chai'),
-    chaiAsPromised = require('chai-as-promised'),
-    Server         = require('../'),
-    assert         = chai.assert;
+var chai = require('chai');
+var chaiAsPromised = require('chai-as-promised');
+var Server = require('../');
+var assert = chai.assert;
 
 chai.use(chaiAsPromised);
 
-describe('server', function () {
-  'use strict';
-
-  it('rejects with an error if the obtained configuration does not include "script.path" or "executable"', function () {
+describe('server', function() {
+  it('rejects with an error if the obtained configuration does not include "script.path" or "executable"', function() {
     assert.isRejected((new Server()).start());
   });
 
-  it('is observable', function () {
+  it('is observable', function() {
     var server = new Server();
 
     assert.isFunction(server.on);
     assert.isFunction(server.off);
   });
 
-  it('is not possibile to trigger events (outside of the server file)', function () {
+  it('is not possibile to trigger events (outside of the server file)', function() {
     var server = new Server();
 
     assert.isUndefined(server.emit);
   });
 
-  describe('running server', function () {
+  describe('running server', function() {
     var server;
 
-    beforeEach(function (done) {
+    beforeEach(function(done) {
       server = new Server({
-        script: { path: '../example/server.js' }
+        script: {
+          path: '../example/server.js'
+        }
       });
 
       server.start()
-        .then(function () {
+        .then(function() {
           done();
         })
-        .catch(function (err) {
+        .catch(function(err) {
           done(err);
-        })
-      ;
+        });
     });
 
-    afterEach(function (done) {
+    afterEach(function(done) {
       server.stop()
         .then(done)
-        .catch(done)
-      ;
+        .catch(done);
     });
 
-    it('rejects if the server is already running', function () {
+    it('rejects if the server is already running', function() {
       assert.isRejected(server.start());
     });
   });
