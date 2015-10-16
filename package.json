@@ -9,6 +9,7 @@
     "lodash.merge": "~3.3.1",
     "lodash.isfunction": "~3.0.5",
     "lodash.isundefined": "~3.0.1",
+    "lodash.clone": "^3.0.3",
     "eventemitter2": "~0.4.14",
     "event-stream": "~3.3.1",
     "tiny-lr": "~0.2.1",
@@ -32,7 +33,6 @@
     "gulp-mocha": "~2.1.1",
     "gulp-notify": "^2.2.0",
     "gulp-sequence": "^0.4.1",
-    "lodash.clone": "^3.0.3",
     "mocha": "^2.3.3",
     "through2": "~2.0.0"
   },
