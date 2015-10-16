@@ -1,10 +1,9 @@
 gulp-dev-server
 ===============
-[![status][travisImage]][travisLink] [![downloads][downloadCount]][npmLink]
+[![status][travisImage]][travisLink] [![downloads][downloadCount]][npmLink] [![Code Climate](https://codeclimate.com/github/MrBoolean/gulp-dev-server/badges/gpa.svg)](https://codeclimate.com/github/MrBoolean/gulp-dev-server) [![Test Coverage](https://codeclimate.com/github/MrBoolean/gulp-dev-server/badges/coverage.svg)](https://codeclimate.com/github/MrBoolean/gulp-dev-server/coverage)
 
 [travisImage]: http://img.shields.io/travis/MrBoolean/gulp-dev-server/master.svg?style=flat-square
 [travisLink]: https://travis-ci.org/MrBoolean/gulp-dev-server
-
 [downloadCount]: http://img.shields.io/npm/dm/gulp-dev-server.svg?style=flat-square
 [npmLink]: https://www.npmjs.com/package/gulp-dev-server
 
