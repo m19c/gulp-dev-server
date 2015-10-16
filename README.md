@@ -9,6 +9,11 @@ gulp-dev-server
 
 With `gulp-dev-server` you can simplify your development environment easy and uncomplicated. The annoying stopping and starting your script has an end.
 
+## Install
+```
+npm i --save-dev gulp-dev-server
+```
+
 ## Usage
 ```javascript
 var gds = require('gulp-dev-server');
