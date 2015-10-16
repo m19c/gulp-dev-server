@@ -26,11 +26,14 @@
     "gulp-codeclimate-reporter": "^1.0.0",
     "gulp-coverage": "~0.3.36",
     "gulp-eslint": "~1.0.0",
+    "gulp-gh-pages": "^0.5.3",
     "gulp-istanbul": "*",
+    "gulp-jsdoc": "^0.1.5",
     "gulp-mocha": "~2.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sequence": "^0.4.1",
     "lodash.clone": "^3.0.3",
     "mocha": "^2.3.3",
-    "run-sequence": "~1.1.0",
     "through2": "~2.0.0"
   },
   "scripts": {

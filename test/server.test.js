@@ -30,7 +30,8 @@ describe('server', function() {
       server = new Server({
         script: {
           path: '../example/server.js'
-        }
+        },
+        verbose: true
       });
 
       server.start()
