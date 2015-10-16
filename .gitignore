@@ -3,3 +3,4 @@ node_modules
 .coverdata
 .coverrun
 dist/
+.publish
