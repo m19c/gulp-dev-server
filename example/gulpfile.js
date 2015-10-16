@@ -1,7 +1,7 @@
-var gulp   = require('gulp'),
-    Server = require('../');
+var gulp = require('gulp');
+var Server = require('../');
 
-gulp.task('dev', function () {
+gulp.task('dev', function() {
   Server.task({
     notify: ['./server.js'],
     restart: ['./server.js'],
@@ -9,5 +9,5 @@ gulp.task('dev', function () {
       script: { path: 'server.js' },
       verbose: true
     }
-  })
+  });
 });

@@ -30,9 +30,9 @@ gulp.task('test', ['test.instrument'], function test() {
 gulp.task('lint', function lint() {
   gulp
     .src([
-      'lib/**/*.js',
-      'test/**/*.js',
-      'gulpfile.js'
+      '**/*.js',
+      '!node_modules/**/*',
+      '!dist/**/*'
     ])
     .pipe(eslint())
     .pipe(eslint.format())

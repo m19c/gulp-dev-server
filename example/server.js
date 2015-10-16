@@ -1,14 +1,12 @@
-'use strict';
-
-var express    = require('express'),
-    liveReload = require('connect-livereload'),
-    app;
+var express = require('express');
+var liveReload = require('connect-livereload');
+var app;
 
 app = express();
 
 app.use(liveReload());
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
   res.send('Welcome!');
 });
 
