@@ -7,6 +7,7 @@ var sequence = require('gulp-sequence');
 var jsdoc = require('gulp-jsdoc');
 var notify = require('gulp-notify');
 var ghp = require('gulp-gh-pages');
+var codeclimate = require('gulp-codeclimate-reporter');
 
 gulp.task('test.instrument', function instrument() {
   return gulp
@@ -35,17 +36,14 @@ gulp.task('test', ['test.instrument'], function test() {
 gulp.task('lint', function lint() {
   gulp
     .src([
-      '**/*.js',
-      '!node_modules/**/*',
-      '!dist/**/*'
+      'lib/**/*.js',
+      'test/**/*.js',
+      'gulpfile.js',
+      'index.js'
     ])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failOnError())
-    .pipe(notify({
-      title: info.name,
-      message: 'Lint done'
-    }))
   ;
 });
 
@@ -81,4 +79,13 @@ gulp.task('doc.deploy', ['doc'], function gitHubPage() {
   ;
 });
 
-gulp.task('default', sequence('lint', 'test'));
+gulp.task('codeclimate', function sendToCodeclimate() {
+  return gulp
+    .src(['dist/report/lcov.info'], { read: false })
+    .pipe(codeclimate({
+      token: '7ed73d39e9b5001ffb3de86e98fb37b1fd0a40299522c9ec3932a1055784ed01'
+    }))
+  ;
+});
+
+gulp.task('default', sequence('lint', 'test', 'codeclimate'));
