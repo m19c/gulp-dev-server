@@ -12,12 +12,12 @@ With `gulp-dev-server` you can simplify your development environment easy and un
 
 ## Usage
 ```javascript
-var Server = require('gulp-dev-server');
+var gds = require('gulp-dev-server');
 
 // ...
 
 gulp.task('dev', function () {
-  Server.task({
+  gds.task({
     restart: ['lib/**/*.js'],
     notify: ['static/**/*.js'],
     server: {
