@@ -75,7 +75,9 @@ gulp.task('doc', function doc() {
 gulp.task('doc.deploy', ['doc'], function gitHubPage() {
   return gulp
     .src('dist/doc/tb/**/*')
-    .pipe(ghp())
+    .pipe(ghp({
+      cacheDir: 'dist/ghp'
+    }))
   ;
 });
 
